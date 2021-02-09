@@ -1,0 +1,14 @@
+// Color variables
+$color-dark-green: #054242;
+
+
+// Font-sizes
+$title-font-size: 38px;
+
+
+// Screen width
+$breakpoints: (
+  'small':  767px,
+  'medium': 992px,
+  'large':  1200px
+) !default;
