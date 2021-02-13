@@ -1,0 +1,46 @@
+.header {
+  background-color: $color-blue;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include respond-to("small") {
+    height: 200px;
+  }
+  @include respond-to("medium") {
+    height: 310px;
+  }
+}
+
+.header__title {
+  margin-bottom: rem-calc(17px);
+  font-family: Oswald;
+  font-size: rem-calc(25px);
+  text-transform: uppercase;
+  line-height: 0.72;
+  letter-spacing: 2.5px;
+  text-align: center;
+  color: $color-regular-white;
+}
+.menu {
+  justify-content: center;
+  font-size: rem-calc(12px);
+  line-height: 1;
+  color: $color-gray-menu;
+}
+
+.menu__arrow {
+  font-size: rem-calc(14px);
+}
+
+.menu__links {
+  text-decoration: none;
+  padding: 0 5px;
+  font-family: Poppins;
+  color: $color-gray-menu;
+  &:hover {
+    color: $color-regular-white;
+  }
+}

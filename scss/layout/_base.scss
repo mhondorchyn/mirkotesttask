@@ -1,0 +1,26 @@
+// This element wraps whole content
+.wrapper {
+  max-width: 1500px;
+  margin: auto;
+  padding: rem-calc(0 30px);
+  box-sizing: content-box;
+}
+
+.content {
+  background-color: $color-regular-white;
+  position: relative;
+  top: -25px;
+  z-index: 1;
+  padding-top: rem-calc(25px);
+  box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.3);
+
+  @include respond-to("small") {
+    top: -50px;
+    padding-top: rem-calc(50px);
+  }
+
+  @include respond-to("medium") {
+    top: -75px;
+    padding-top: rem-calc(75px);
+  }
+}

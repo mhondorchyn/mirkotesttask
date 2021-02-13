@@ -1,9 +1,12 @@
 // Example reset file, pls fill it
+body {
+  margin: 0;
+}
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul li {
-    list-style: none;
+  list-style: none;
 }

@@ -1,0 +1,99 @@
+.similar-products {
+  border-top: 1px solid #ebebeb;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.similar-products__item {
+  flex-basis: 50%;
+  position: relative;
+  box-shadow: 0 1px #ebebeb, 1px 0 #ebebeb;
+
+  @include respond-to("small") {
+    flex-basis: 33.333%;
+  }
+
+  @include respond-to("medium") {
+    flex-basis: 25%;
+  }
+}
+
+.similar-products__image {
+  width: 100%;
+  height: auto;
+}
+
+.similar-products_tag {
+  font-size: rem-calc(50px);
+  color: $color-blue;
+}
+
+.similar-products__label {
+  font-family: Poppins;
+  font-size: rem-calc(13px);
+  text-align: center;
+  color: $color-dark-gray;
+}
+
+.similar-products__title {
+  text-transform: uppercase;
+  font-family: Oswald;
+  font-size: rem-calc(18px);
+  color: $color-regular-white;
+  margin-bottom: rem-calc(40px);
+}
+.similar-products__more {
+  font-family: Poppins;
+  margin-top: rem-calc(50px);
+  font-size: rem-calc(13px);
+  font-weight: 500;
+  text-align: center;
+  color: $color-regular-white;
+}
+
+.more-products {
+  min-height: 100%;
+  padding: rem-calc(16px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-dark-gray; rem-calc(5px);
+}
+.similar-product-card {
+  padding: rem-calc(25px);
+
+  @include respond-to("large") {
+    padding: rem-calc(50px);
+  }
+}
+.similar-product-card__name {
+  font-family: Oswald;
+  font-size: rem-calc(17px);
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: $color_black;
+}
+
+.similar-product-card__price {
+  font-family: Poppins;
+  font-size: rem-calc(14px);
+  font-weight: 500;
+  color: $color-blue-price;
+}
+
+.similar-product-card__discount {
+  position: absolute;
+  top: rem-calc(5px);
+  right: rem-calc(5px);
+
+  @include respond-to("small") {
+    top: rem-calc(30px);
+    right: rem-calc(30px);
+  }
+}

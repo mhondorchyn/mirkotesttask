@@ -1,14 +1,25 @@
 // Color variables
 $color-dark-green: #054242;
-
+$color-blue: #3a54d6; // Used for small accents and header
+$color-blue-price: #2344e8; // Used for price pice only
+$color-gray-menu: #7e8fe7; // Used for menu items
+$color_black: #111111; // Used for text title
+$color-regular-white: #ffffff; // Used for header, regular white
+$color-dark-gray: #666666; // Used for text
+$color-very-dark-gray: #222222; // Used for card label
+$color-light-gray: #b1b1b1; // Used for old price
+// Button selector colors
+$color-btn-purple: #3a54d6; //Used for purple selector button
+$color-btn-aqua: #23a5e8; // Used for aqua selector button
+$color-btn-green: #5bb22c; // Used for green selector button
+$color-btn-yellow: #feb312; // Used for yellow selector button
 
 // Font-sizes
 $title-font-size: 38px;
 
-
 // Screen width
 $breakpoints: (
-  'small':  767px,
-  'medium': 992px,
-  'large':  1200px
+  "small": 767px,
+  "medium": 992px,
+  "large": 1200px,
 ) !default;

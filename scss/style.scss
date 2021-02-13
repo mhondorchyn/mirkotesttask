@@ -1,8 +1,11 @@
 // Settings
-@import './utils/main';
+@import "./utils/main";
 
-// Layout 
-@import './layout/reset';
+// Layout
+@import "./layout/reset";
+@import "./layout/base";
 
-// Blocks 
-@import './blocks/hello';
+// Blocks
+@import "./blocks/header";
+@import "./blocks/product";
+@import "./blocks/similar-products";
