@@ -1,6 +1,6 @@
 // This element wraps whole content
 .wrapper {
-  max-width: 1500px;
+  max-width: rem-calc(1500px);
   margin: auto;
   padding: rem-calc(0 30px);
   box-sizing: content-box;

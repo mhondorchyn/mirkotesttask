@@ -9,8 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="./dist/css/style.css">
-    <src src="./dist/js/main.js"></src>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    <script src="./dist/js/main.js"></script>
 
     <title>MEN'S LIFESTYLE SHOES</title>
 </head>
@@ -18,46 +22,78 @@
     
     <header class="header">
         <h1 class="header__title">men's lifestyle shoes</h1>
-        <nav class="menu">
-            <a href="/" class="menu__links">Home</a>
-            <span class="menu__arrow">&#8250;</span>
-            <a href="/" class="menu__links">Catalog</a>
-            <span class="menu__arrow">&#8250;</span>
-            <a href="/" class="menu__links">Men</a>
-            <span class="menu__arrow">&#8250;</span>
-            <a href="/" class="menu__links">Shoes</a>
-        </nav>
+        <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+                <a href="/" class="breadcrumbs__link">Home</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a href="/" class="breadcrumbs__link">Catalog</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a href="/" class="breadcrumbs__link">Men</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a href="/" class="breadcrumbs__link">Shoes</a>
+            </li>
+        </ul>
     </header>
     <div class="wrapper">
         <div class="content">
             <div class="product">
                 <div class="product__info">
                 <div class="product__description">
-                    <span class="product__category">lifestyle</span>
+                    <a href="#" class="product__category">lifestyle</a>
                     <h2 class="product__name">LeBron XIII Premium AS iD </h2>
                     <div class="product__data">
                         <div class="variants">
                             <div class="variants__label">colors:</div>
                             <div class="variants__content variants__content_type_colors">
-                                <button class="color-btn color-btn_color_purple"></button>
-                                <button class="color-btn color-btn_color_aqua"><i class="fa fa-check"></i></button>
-                                <button class="color-btn color-btn_color_green"></button>
-                                <button class="color-btn color-btn_color_yellow"></button>
+                                <label class="color-btn color-btn_color_purple">
+                                    <input name="color" type="radio" class="color__input" />
+                                    <i class="fa fa-check color__icon"></i>
+                                </label> 
+                                <label class="color-btn color-btn_color_aqua">
+                                    <input name="color" type="radio" checked class="color__input" />
+                                    <i class="fa fa-check color__icon"></i>
+                                </label> 
+                                <label class="color-btn color-btn_color_green">
+                                    <input name="color" type="radio" class="color__input" />
+                                    <i class="fa fa-check color__icon"></i>
+                                </label> 
+                                <label class="color-btn color-btn_color_yellow">
+                                    <input name="color" type="radio" class="color__input" />
+                                    <i class="fa fa-check color__icon"></i>
+                                </label>
                             </div>
                         </div>
                         <div class="variants">
                             <div class="variants__label">size:</div>
                             <div class="variants__content">
-                                <button class="size-btn size-btn_active">9.5</button>
-                                <button class="size-btn">9</button>
-                                <button class="size-btn">10</button>
-                                <button class="size-btn">10.5</button>
-                                <button class="size-btn">11</button>
+                                <label class="size-btn">
+                                    <input name="size" type="radio" checked class="size-btn__input">
+                                    <span class="size-btn__text">9.5</span>
+                                </label>
+                                <label class="size-btn">
+                                    <input name="size" type="radio" class="size-btn__input">
+                                    <span class="size-btn__text">9</span>
+                                </label>
+                                <label class="size-btn">
+                                    <input name="size" type="radio" class="size-btn__input">
+                                    <span class="size-btn__text">10</span>
+                                </label>
+                                <label class="size-btn">
+                                    <input name="size" type="radio" class="size-btn__input">
+                                    <span class="size-btn__text">10.5</span>
+                                </label>
+                                <label class="size-btn">
+                                    <input name="size" type="radio" class="size-btn__input">
+                                    <span class="size-btn__text">11</span>
+                                </label>
                             </div>
                         </div>
                     </div>
                     <div class="product__footer">
-                        <div class="product-prices">
+                        <div class="product-prices ">
                             <span class="product-prices__price">
                                 $250.00
                                 <span class="product-prices__price-old">350.00</span>
@@ -69,7 +105,7 @@
                         
                         <div class="shopping-counter">
                             <button class="shopping__counter__btn">-</button>
-                            2
+                            <input class="shopping-counter__input "type="text" value="1" > 
                             <button class="shopping__counter__btn">+</button>
                         </div>
                         
@@ -81,84 +117,91 @@
                 </div>
             </div>
                 <div class="product__images">
-                    <div class="product__image">
+                    <div class="product__image js-main-slider">
+                        <img width="100%" src="https://via.placeholder.com/500" alt="placeholder">
+                        <img width="100%" src="https://via.placeholder.com/500" alt="placeholder">
+                        <img width="100%" src="https://via.placeholder.com/500" alt="placeholder">
+                        <img width="100%" src="https://via.placeholder.com/500" alt="placeholder">
+                        <img width="100%" src="https://via.placeholder.com/500" alt="placeholder">
+                        <img width="100%" src="https://via.placeholder.com/500" alt="placeholder">
                         <img width="100%" src="https://via.placeholder.com/500" alt="placeholder">
                     </div>
-                    <div class="image-list">
-                        <div class="image-list__item image-list__item_active"><img src="https://via.placeholder.com/60" alt="placeholder"></div>
+                    
+                    <div class="image-list js-main-slider-nav">
+                        <div class="image-list__item"><img src="https://via.placeholder.com/60" alt="placeholder"></div>
+                        <div class="image-list__item"><img src="https://via.placeholder.com/60" alt="placeholder"></div>
+                        <div class="image-list__item"><img src="https://via.placeholder.com/60" alt="placeholder"></div>
                         <div class="image-list__item"><img src="https://via.placeholder.com/60" alt="placeholder"></div>
                         <div class="image-list__item"><img src="https://via.placeholder.com/60" alt="placeholder"></div>
                         <div class="image-list__item"><img src="https://via.placeholder.com/60" alt="placeholder"></div>
                         <div class="image-list__item"><img src="https://via.placeholder.com/60" alt="placeholder"></div>
                     </div>
+                    
                 </div>
             </div>
-            
             <div class="similar-products">
                 <div class="similar-products__item">
                     <div class="more-products">
                         <i class="fa fa-tag similar-products_tag" aria-hidden="true"></i>
                         <h1 class="similar-products__title"> similar products</h1>
                         <span class="similar-products__label">Proin hendrerit suscipit justo</span>
-                        <span class="similar-products__more">More Products <i class="fa fa-check-circle "></i></span>
+                        <span class="similar-products__more">More Products <i class="fa fa-check-circle"></i></span>
                     </div>
                 </div>
                 <div class="similar-products__item">
-                    <div class="similar-product-card">
+                    <a  href="#" class="similar-product-card">
                         <img class="similar-products__image" src="https://via.placeholder.com/275x205" alt="placeholder">
                         <h2 class="similar-product-card__name">Air Jordar XX9 Low</h2>
                         <span class="similar-product-card__price">$ 185.00</span>
-                    </div>
+                    </a>
                 </div>
                 <div class="similar-products__item">
-                    <div class="similar-product-card">
+                    <a href="#" class="similar-product-card">
                         <img class="similar-products__image" src="https://via.placeholder.com/275x205" alt="placeholder">
                         <h2 class="similar-product-card__name">LeBron XIII Premium AS iD</h2>
                         <span class="similar-product-card__price">$ 265.00</span>
-                    </div>
+                    </a>
                 </div>
                 <div class="similar-products__item">
-                    <div class="similar-product-card">
+                    <a href="#" class="similar-product-card">
                         <img class="similar-products__image" src="https://via.placeholder.com/275x205" alt="placeholder">
                         <h2 class="similar-product-card__name">KD 8 EXT</h2>
                         <span class="similar-product-card__price">$ 145.00</span>
-                    </div>
+                    </a>
                 </div>
                 <div class="similar-products__item">
-                    <div class="similar-product-card">
+                    <a href="#" class="similar-product-card">
                         <div class="similar-product-card__discount">
                             <span class="discount">-30%</span>
                         </div>
                         <img class="similar-products__image" src="https://via.placeholder.com/275x205" alt="placeholder">
                         <h2 class="similar-product-card__name">Air Jordan 1 Retro High Nouveau</h2>
                         <span class="similar-product-card__price">$ 190.00</span>
-                    </div>
+                    </a>
                 </div>
                 <div class="similar-products__item">
-                    <div class="similar-product-card">
+                    <a href="#" class="similar-product-card">
                         <img class="similar-products__image" src="https://via.placeholder.com/275x205" alt="placeholder">
                         <h2 class="similar-product-card__name">Nike Air Presto</h2>
                         <span class="similar-product-card__price">$ 175.00</span>
-                    </div>
+                    </a>
                 </div>
                 <div class="similar-products__item">
-                    <div class="similar-product-card">
+                    <a href="#" class="similar-product-card">
                         <img class="similar-products__image" src="https://via.placeholder.com/275x205" alt="placeholder">
                         <h2 class="similar-product-card__name">KD 8 Premium AS iD</h2>
                         <span class="similar-product-card__price">$ 245.00</span>
-                    </div>
+                    </a>
                 </div>
                 <div class="similar-products__item">
-                    <div class="similar-product-card">
+                    <a href="#" class="similar-product-card">
                         <img class="similar-products__image" src="https://via.placeholder.com/275x205" alt="placeholder">
                         <h2 class="similar-product-card__name">Jordan Horizon</h2>
                         <span class="similar-product-card__price">$ 230.00</span>
-                    </div>
+                    </a>
                 </div>
             </div>
-
         </div>
     </div>
 </body>
-
 </html>

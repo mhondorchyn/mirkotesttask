@@ -1,5 +1,5 @@
 .similar-products {
-  border-top: 1px solid #ebebeb;
+  border-top: 1px solid $color-border;
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
@@ -8,7 +8,7 @@
 .similar-products__item {
   flex-basis: 50%;
   position: relative;
-  box-shadow: 0 1px #ebebeb, 1px 0 #ebebeb;
+  box-shadow: 0 1px $color-border, 1px 0 $color-border;
 
   @include respond-to("small") {
     flex-basis: 33.333%;
@@ -26,7 +26,7 @@
 
 .similar-products_tag {
   font-size: rem-calc(50px);
-  color: $color-blue;
+  color: $color-warm-blue;
 }
 
 .similar-products__label {
@@ -43,6 +43,7 @@
   color: $color-regular-white;
   margin-bottom: rem-calc(40px);
 }
+
 .similar-products__more {
   font-family: Poppins;
   margin-top: rem-calc(50px);
@@ -59,25 +60,38 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: $color-dark-gray; rem-calc(5px);
+  background-color: $color-mine-shaft;
 }
+
+.shopping-counter__input {
+  border: 0;
+  width: 2em;
+  text-align: center;
+}
+
 .similar-product-card {
+  display: inline-flex;
+  flex-direction: column;
+  text-decoration: none;
   padding: rem-calc(25px);
 
   @include respond-to("large") {
     padding: rem-calc(50px);
   }
 }
+
 .similar-product-card__name {
   font-family: Oswald;
   font-size: rem-calc(17px);
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   text-align: left;
   color: $color_black;
+  margin: 0 0 rem-calc(20px);
+  order: -1;
+
+  @include respond-to("small") {
+    order: 0;
+    margin: rem-calc(29px) 0 0;
+  }
 }
 
 .similar-product-card__price {
@@ -85,6 +99,7 @@
   font-size: rem-calc(14px);
   font-weight: 500;
   color: $color-blue-price;
+  margin-top: rem-calc(12px);
 }
 
 .similar-product-card__discount {

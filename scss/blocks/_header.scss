@@ -1,6 +1,6 @@
 .header {
-  background-color: $color-blue;
-  height: 150px;
+  background-color: $color-warm-blue;
+  padding: rem-calc(150px) 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,18 +24,25 @@
   text-align: center;
   color: $color-regular-white;
 }
-.menu {
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
   justify-content: center;
   font-size: rem-calc(12px);
   line-height: 1;
   color: $color-gray-menu;
 }
 
-.menu__arrow {
-  font-size: rem-calc(14px);
+.breadcrumbs__item {
+  display: inline-block;
+  &::after {
+    content: "\3009";
+    font-size: rem-calc(10px);
+  }
 }
 
-.menu__links {
+.breadcrumbs__link {
   text-decoration: none;
   padding: 0 5px;
   font-family: Poppins;
